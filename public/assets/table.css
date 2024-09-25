@@ -1,0 +1,10 @@
+#tabla-encabezado {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+#tabla-encabezado th, #tabla-cuerpo td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}

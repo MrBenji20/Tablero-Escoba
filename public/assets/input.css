@@ -1,0 +1,117 @@
+section{
+    flex-direction: column;
+}
+.form {
+    width: 100%;
+    height: 50px;
+    max-width: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.form input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    padding-top: 20px;
+    border: none;
+    outline: 5px;
+    transition: background-color .5s opacity .5s;
+}
+
+/* Colores de texto de input */
+.primary input {color: var(--primary-color);}
+.primary_lighten input {color: var(--primary-color-lighten);}
+.secondary input {color: var(--secondary-color);}
+.secondary_lighten input {color: var(--secondary-color-lighten);}
+.tertiary input {color: var(--tertiary-color);}
+.tertiary_lighten input {color: var(--tertiary-color-lighten);}
+
+
+.form>.lbl {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Colores para borde de abajo del label */
+.primary>.lbl{border-bottom: 1px solid var(--primary-color);}
+.primary_lighten>.lbl{border-bottom: 1px solid var(--primary-color-lighten);}
+.secondary>.lbl{border-bottom: 1px solid var(--secondary-color);}
+.secondary_lighten>.lbl{border-bottom: 1px solid var(--secondary-color-lighten);}
+.tertiary>.lbl{border-bottom: 1px solid var(--tertiary-color);}
+.tertiary_lighten>.lbl{border-bottom: 1px solid var(--tertiary-color-lighten);}
+
+.form>.lbl:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: all .3s ease;
+}
+
+/* Colores para el borde de despues */
+.primary>.lbl:after {border-bottom: 3px solid var(--primary-color);}
+.primary_lighten>.lbl:after {border-bottom: 3px solid var(--primary-color-lighten);}
+.secondary>.lbl:after {border-bottom: 3px solid var(--secondary-color);}
+.secondary_lighten>.lbl:after {border-bottom: 3px solid var(--secondary-color-lighten);}
+.tertiary>.lbl:after {border-bottom: 3px solid var(--tertiary-color);}
+.tertiary_lighten>.lbl:after {border-bottom: 3px solid var(--tertiary-color-lighten);}
+
+.lbl>span {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all .3s ease;
+}
+
+/* color del span */
+.primary>.lbl>span{color: var(--primary-color);}
+.primary_lighten>.lbl>span{color: var(--primary-color-lighten);}
+.secondary>.lbl>span{color: var(--secondary-color);}
+.secondary_lighten>.lbl>span{color: var(--secondary-color-lighten);}
+.tertiary>.lbl>span{color: var(--tertiary-color);}
+.tertiary_lighten>.lbl>span{color: var(--tertiary-color-lighten);}
+
+.form input:focus+.lbl span,
+.form input:valid+.lbl span {
+    transform: translateY(-150%);
+    font-size: 14px;
+}
+
+/* colores para llevar el texto arriba */
+.primary input:focus+.lbl span,
+.primary input:valid+.lbl span {
+    color: var(--primary-color);
+}
+.primary_lighten input:focus+.lbl span,
+.primary_lighten input:valid+.lbl span {
+    color: var(--primary-color-lighten);
+}
+.secondary input:focus+.lbl span,
+.secondary input:valid+.lbl span {
+    color: var(--secondary-color);
+}
+.secondary_lighten input:focus+.lbl span,
+.secondary_lighten input:valid+.lbl span {
+    color: var(--secondary-color-lighten);
+}
+.tertiary input:focus+.lbl span,
+.tertiary input:valid+.lbl span {
+    color: var(--tertiary-color);
+}
+.tertiary_lighten input:focus+.lbl span,
+.tertiary_lighten input:valid+.lbl span {
+    color: var(--tertiary-color-lighten);
+}
+
+.form input:focus+.lbl:after,
+.form input:valid+.lbl::after{
+    transform: translateX(0%);
+}
