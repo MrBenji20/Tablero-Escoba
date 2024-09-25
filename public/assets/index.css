@@ -1,0 +1,11 @@
+section{
+    text-align: center;
+}
+
+.jugadores {
+    display: flex;
+    flex-wrap: wrap;/* 
+    text-align: center;
+    align-items: center; */
+    justify-content: center;
+}

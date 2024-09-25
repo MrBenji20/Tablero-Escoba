@@ -4,7 +4,7 @@
     margin-top: 20px;
 }
 #tabla-encabezado th, #tabla-cuerpo td {
-    border: 1px solid #ccc;
+    border: 1px solid var(--primary-color);
     padding: 8px;
     text-align: center;
 }

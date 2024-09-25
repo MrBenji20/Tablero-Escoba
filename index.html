@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,10 @@
     <link rel="stylesheet" href="public/assets/button.css">
     <link rel="stylesheet" href="public/assets/card.css">
     <link rel="stylesheet" href="public/assets/table.css">
+    <link rel="stylesheet" href="public/assets/index.css">
     <title>Escoba</title>
 </head>
+
 <body>
     <main>
         <!-- Ingresar participantes -->
@@ -21,11 +24,15 @@
             <button id="agregarJugadorBtn">Agregar Jugador</button>
         </section>
 
-        <h1>Resultados</h1>
         
+        <h1>Jugadores</h1>
         <!-- Mostrar los puntajes -->
-        <section id="listaJugadores"></section>
-        
+        <section>
+            <div id="listaJugadores" class="jugadores"></div>
+            <br>
+            <button id="guardarPuntosBtn" style="display: none;">Guardar Puntos</button>
+        </section>
+
         <section>
             <table>
                 <thead id="tabla-encabezado">
@@ -37,13 +44,12 @@
                 <tbody id="tabla-cuerpo">
                 </tbody>
             </table>
-                       
-        </section>
 
-        <button id="guardarPuntosBtn" style="display: none;">Guardar Puntos</button>
+        </section>
 
     </main>
 
     <script src="public/scripts/sumar-agregar.js"></script>
 </body>
+
 </html>
