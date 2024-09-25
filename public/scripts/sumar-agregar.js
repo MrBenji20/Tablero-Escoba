@@ -49,19 +49,19 @@ function crearCardJugador(jugador, index) {
         </div>
         <div>
             <label>Cartas: </label>
-            <input type="radio" value="1" data-tipo="cartas" data-index="${index}">
+            <input type="radio" value="1" data-tipo="cartas" name="cartas" data-index="${index}">
         </div>
         <div>
             <label>Oros: </label>
-            <input type="radio" value="1" data-tipo="oros" data-index="${index}">
+            <input type="radio" value="1" data-tipo="oros" name="oros" data-index="${index}">
         </div>
         <div>
             <label>Primera: </label>
-            <input type="radio" value="1" data-tipo="primera" data-index="${index}">
+            <input type="radio" value="1" data-tipo="primera" name="primera" data-index="${index}">
         </div>
         <div>
             <label>7 velo: </label>
-            <input type="radio" value="1" data-tipo="sieteVelo" data-index="${index}">
+            <input type="radio" value="1" data-tipo="sieteVelo" name="sieteVelo" data-index="${index}">
         </div>
     `;
 
