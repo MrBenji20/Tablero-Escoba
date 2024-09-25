@@ -21,11 +21,7 @@ section{
 
 /* Colores de texto de input */
 .primary input {color: var(--primary-color);}
-.primary_lighten input {color: var(--primary-color-lighten);}
-.secondary input {color: var(--secondary-color);}
-.secondary_lighten input {color: var(--secondary-color-lighten);}
-.tertiary input {color: var(--tertiary-color);}
-.tertiary_lighten input {color: var(--tertiary-color-lighten);}
+.primary_lighten input {color: var(--primary-color-lighten) !important;}
 
 
 .form>.lbl {

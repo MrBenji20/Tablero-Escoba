@@ -6,11 +6,11 @@
 }
 
 .jugador-card {
-    border: 1px solid #ddd;
+    border: 1px solid var(--primary-color);
     padding: 15px;
     border-radius: 8px;
     width: 300px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px rgba(0, 0, 0, 0.8);
 }
 
 .jugador-card h3 {
@@ -23,4 +23,11 @@
 
 .jugador-card label {
     font-weight: bold;
+}
+
+.card-tittle {
+    color: var(--primary-color-lighten);
+    text-align: center;
+    text-transform: var(--text-transform);
+    border-bottom: 2px solid var(--primary-color-lighten);
 }

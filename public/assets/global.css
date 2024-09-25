@@ -1,21 +1,16 @@
 :root {
-    --fondo-color: #fff;
-    --primary-color: #0bb79e;
-    --primary-color-lighten: #a3d339;
+    --fondo-color: #001f29;
 
-    --secondary-color: #fcd432;
-    --secondary-color-lighten: #ff9912;
-    --tertiary-color: #05a6dd;
-    --tertiary-color-lighten: #5fd6f2;
+    --primary-color: #05a6dd;
+    --primary-color-lighten: #5fd6f2;
 
     --success-color: #5cb85c;
     --warning-color: #fcd432;
     --error-color: #dc3545;
 
-    --text-transform-btn: uppercase;
+    --text-transform: uppercase;
     --weight-btn: 600;
     --letter-spacing-btn: 1.5px;
-    --fondo: #f1f1f1;
 }
 
 * {
@@ -29,6 +24,8 @@ body {
     height: 100%;
     width: 100%;
     font: 100% sans-serif;
+    background-color: var(--fondo-color);
+    color: var(--primary-color-lighten);
 }
 
 main {
@@ -41,5 +38,4 @@ main {
     align-items: center;
     height: 50%;
     width: 100%;
-    background-color: var(--fondo-color);
 }

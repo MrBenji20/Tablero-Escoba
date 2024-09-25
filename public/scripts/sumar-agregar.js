@@ -40,28 +40,30 @@ function crearCardJugador(jugador, index) {
     cardJugador.classList.add('jugador-card');
 
     cardJugador.innerHTML = `
-        <h3>${jugador.nombre}</h3>
+        <div class="card-tittle">
+                 <h3>${jugador.nombre}</h3>
+        </div>
         <div>
-            <div class="form primary">
+            <div class="form primary_lighten">
                 <input type="number" class="puntaje" data-tipo="escobas" data-index="${index}" required>
-                <label class="lbl primary"><span>Escobas</span></label>
+                <label class="lbl primary_lighten"><span>Escobas</span></label>
             </div>
         </div>
         <div>
-            <label>Cartas: </label>
-            <input type="radio" value="1" data-tipo="cartas" name="cartas" data-index="${index}">
+        <input type="radio" value="1" data-tipo="cartas" name="cartas" data-index="${index}">
+        <label>Cartas</label>
         </div>
         <div>
-            <label>Oros: </label>
-            <input type="radio" value="1" data-tipo="oros" name="oros" data-index="${index}">
+        <input type="radio" value="1" data-tipo="oros" name="oros" data-index="${index}">
+        <label>Oros</label>
         </div>
         <div>
-            <label>Primera: </label>
-            <input type="radio" value="1" data-tipo="primera" name="primera" data-index="${index}">
+        <input type="radio" value="1" data-tipo="primera" name="primera" data-index="${index}">
+        <label>Primera</label>
         </div>
         <div>
-            <label>7 velo: </label>
-            <input type="radio" value="1" data-tipo="sieteVelo" name="sieteVelo" data-index="${index}">
+        <input type="radio" value="1" data-tipo="sieteVelo" name="sieteVelo" data-index="${index}">
+        <label>7 velo</label>
         </div>
     `;
 
@@ -87,14 +89,28 @@ function actualizarPuntaje(event) {
     }
 }
 
-// Función para manejar los radios y guardar su selección
+// Función para manejar los radios
 function actualizarRadio(event) {
-    const index = event.target.dataset.index;
-    const tipo = event.target.dataset.tipo;
+    const index = event.target.dataset.index; // Jugador actual
+    const tipo = event.target.dataset.tipo;   // Tipo de radio seleccionado
 
-    // Guardar la selección de los radios
-    jugadores[index][tipo] = parseInt(event.target.value) || 0; // Se asegura de que tenga un valor
+    // Guardar la selección del radio actual
+    jugadores[index][tipo] = parseInt(event.target.value);
+
+    // Recorrer todos los jugadores y deseleccionar los radios del mismo tipo en los otros jugadores
+    jugadores.forEach((jugador, i) => {
+        if (i !== parseInt(index)) { // Excluir al jugador actual
+            const radios = document.querySelectorAll(`input[data-index="${i}"][data-tipo="${tipo}"]`);
+            radios.forEach(radio => {
+                radio.checked = false; // Deselecciona los radios del mismo tipo en otros jugadores
+            });
+
+            // Resetea el valor del tipo en los otros jugadores a 0
+            jugadores[i][tipo] = 0;
+        }
+    });
 }
+
 
 // Función para guardar los puntajes en la tabla
 function guardarPuntos() {
