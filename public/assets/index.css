@@ -4,8 +4,6 @@ section{
 
 .jugadores {
     display: flex;
-    flex-wrap: wrap;/* 
-    text-align: center;
-    align-items: center; */
+    flex-wrap: wrap;
     justify-content: center;
 }
